@@ -1,0 +1,581 @@
+/*
+Author: Cynthia Sun
+Date: 11/07/2023
+File Name: styles.css
+*/
+
+/*CSS Reset*/
+body, header, nav, main, footer, h1, div{
+	margin: 0;
+	padding: 0;
+	border: 0;
+    background-color: #fcf7ea;
+}
+
+/*Template created by Cynthia*/
+header{
+    width: 65%;
+    position: relative;
+    border: 45px solid transparent;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+/*This section is the grid for the logo, title, and quote*/
+.parent{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    }
+    
+.logo{ grid-area: 1 / 1 / 3 / 2; }
+.title{ grid-area: 1 / 2 / 2/ 4; }
+.quote{ grid-area: 2/ 2 / 3 / 5; }
+
+.parent div{
+    font-size: 1vw;
+}
+
+.logo img{
+    max-width: 35%;
+    max-height: 100%;
+    float: right;
+    top: 5%;
+}
+
+.title h1{
+    font-family: Josefin Slab;
+    font-size: 2.5vw;
+    position: absolute;
+    font-weight: 500;
+}
+
+.quote p{
+    font-family: Sacramento;
+    font-size: 1.75vw;
+    position: absolute;
+    top: 25%;
+}
+
+/* Style rules for navigation area completed by Cynthia Sun*/
+nav{
+    position: sticky;
+    height: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    text-align: center;
+}
+
+
+nav li{
+    display: inline;
+    list-style-type: none;
+    margin: 35px;
+}
+
+
+/* Navigation links */
+nav li a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: Amatic SC;
+    transition: .4s;
+}
+
+
+/*Makes text larger when mouse hovers over navigation link*/
+.nav_link:hover{
+    color: #D4AF37;
+    font-size: 2.0vw;
+}
+
+
+/*Make sure to use this font for the body, so that all the webpages have a uniform font*/
+body{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-family: Amatic SC;
+    font-size: 25px;
+    position: relative;
+}
+
+/*Index page completed by Cynthia Sun*/
+/*Slideshow container*/
+.slideshow-container{
+  width: 50vw;
+  height: 27.85vw;
+  position: relative;
+  margin: auto;
+  border: 1px solid #ba9650;
+  margin-top: 2vw;
+}
+
+.mySlides{
+  height: 10vw;
+}
+
+/*The dots/bullets/indicators*/
+
+.dot{
+  height: 15px;
+  width: 15px;
+  margin: 0 .5vw .5vw;
+  background-color: #dccccb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active{
+  background-color: #b4868c;
+}
+
+/*Fading animation for slideshow*/
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade{
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*On smaller screens, decrease text size*/
+@media only screen and (max-width: 300px){
+  .text {font-size: 11px}
+}
+
+/*Venue Page*/
+.venue-container{
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: -1vw;
+  box-sizing: border-box;
+  border: 3px solid #ba9650;
+  height: 90vw;
+  width: 50vw;
+  background-color: rgba(255,255,255,0.12);
+}
+
+.venue-txt{
+  float: right;
+  margin-top: -11vw;
+  margin-left: 18vw;
+  font-family: Josephin Slab;
+  font-size: 1.1vw;
+}
+
+.venue-border{
+  position:relative;
+  box-sizing: border-box;
+  border: 1px solid #ba9650;
+  height: 10.7vw;
+  width: 15.5vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin-left: 1.5vw;
+}
+
+.venue-img{
+  margin-top: -2.2vw;
+  height: 15vw;
+  width: 15.5vw;
+}
+
+.venue-img1{
+  margin-top: -3.8vw;
+  height: 16vw;
+  width: 15.5vw;
+}
+
+.venue-img2{
+  margin-top: -3.25vw;
+  height: 16vw;
+  width: 15.35vw;
+}
+
+.venue-img3{
+  margin-top: -2.7vw;
+  height: 16vw;
+  width: 15.35vw;
+}
+
+.venue-img4{
+  margin-top: -4vw;
+  height: 16vw;
+  width: 15.35vw;
+}
+
+.venue-img5{
+  margin-top: -3.75vw;
+  height: 16vw;
+  width: 15.35vw;
+}
+
+
+.image-container{
+    width: 100%;
+    text-align: center;
+}
+
+.home-img{
+    display: inline-block;
+    margin: 1.2vw;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 70%;
+    opacity: 65%;
+}
+
+.menu-text{
+    margin-top: 2.5vw;
+    font-family: Josephin Slab;
+    text-align: center;
+    box-sizing: border-box;
+    border: 3px solid #ba9650;
+    width: 50vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: .2vw;
+}
+
+
+.menu-container{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: -1vw;
+    box-sizing: border-box;
+    border: 3px solid #ba9650;
+    height: 55vw;
+    width: 50vw;
+    background-color: rgba(255,255,255,0.12);
+}
+
+.menu-text{
+    color: black;
+    font-size: 1.6vw;
+}
+
+/*Dine section of the html completed by Cynthia Sun*/
+.menu-titles{
+    margin-top: 0;
+    font-style: italic;
+    box-sizing: border-box;
+    border: 3px solid rgba(186,150,80,.12);
+    background-color: rgba(186,150,80,.12);
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: Josephin Slab;
+}
+
+.food-title{
+    text-align: center;
+    font-size: 1.4vw;
+}
+
+.food-descrip{
+    float: right;
+    margin-top: -9.1vw;
+    margin-left: 10vw;
+    font-size: .9vw;
+    font-family: Nunito;
+}
+
+.tea-img{
+    margin-top: -2vw;
+    height: 10vw;
+    width: 10vw;
+}
+
+
+.oolong{
+    height: 10vw;
+    width: 10vw; 
+    margin-top: -2.5vw;
+    margin-left: -.1vw;
+}
+
+.earl-grey{
+    height: 8vw;
+    width: 8vw;
+    margin-top: -.5vw;
+    margin-left: 1.3vw;
+}
+
+.sweets-container{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 1vw;
+    box-sizing: border-box;
+    border: 3px solid #ba9650;
+    height: 60vw;
+    width: 50vw;
+    background-color: rgba(255,255,255,0.12);
+}
+
+.sweets-descrip{
+    float: right;
+    margin-top: -10.1vw;
+    margin-left: 12vw;
+    font-size: .9vw;
+    font-family: Nunito;
+}
+
+.food-img{
+    box-sizing: border-box;
+    border: 1px solid #ba9650;
+    height: 10vw;
+    width: 10vw;
+    margin-left: 1vw;
+    margin-top: -1vw;
+}
+
+.sandwiches-container{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 1vw;
+    box-sizing: border-box;
+    border: 3px solid #ba9650;
+    height: 60vw;
+    width: 50vw;
+    background-color: rgba(255,255,255,0.12);
+}
+
+.shop-container{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: -1vw;
+    box-sizing: border-box;
+    border: 3px solid #ba9650;
+    height: 45.5vw;
+    width: 50vw;
+    background-color: rgba(255,255,255,0.12);
+}
+
+/*Table for Bronze Pricing*/
+table.shopTable {
+  border: 2px solid #daa97c;
+  background-color: #FFFFFF;
+  width: 15vw;
+  text-align: center;
+  margin-top: 1.3vw;
+  margin-left: 1vw;
+  position: absolute;
+  font-family: Amatic SC;
+}
+table.shopTable td, table.shopTable th {
+  border: 1px solid #daa97c;
+  padding: .5vw .5vw;
+}
+table.shopTable tbody td {
+  font-size: 1.2vw;
+  font-family: Amatic SC;
+}
+table.shopTable thead {
+  background: #daa97c;
+  border-bottom: 0px solid #444444;
+}
+table.shopTable thead th {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #F0F0F0;
+  text-align: center;
+  border-left: 0px solid #948473;
+}
+table.shopTable thead th:first-child {
+  border-left: none;
+}
+
+.shop-subtext{
+  font-size: 1.2vw;
+}
+
+/*Table for Silver Pricing*/
+table.shopTable2 {
+  position: absolute;
+  border: 2px solid #aaa9ad;
+  background-color: #FFFFFF;
+  width: 15vw;
+  text-align: center;
+  margin-top: 1.3vw;
+  margin-left: 17.5vw;
+  margin-right: 3vw;
+  font-family: Amatic SC;
+}
+table.shopTable2 td, table.shopTable2 th {
+  border: 1px solid #aaa9ad;
+  padding: .5vw .5vw;
+}
+table.shopTable2 tbody td {
+  font-size: 1.2vw;
+  font-family: Amatic SC;
+}
+table.shopTable2 thead {
+  background: #aaa9ad;
+  border-bottom: 0px solid #444444;
+}
+table.shopTable2 thead th {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #F0F0F0;
+  text-align: center;
+  border-left: 0px solid #948473;
+}
+table.shopTable2 thead th:first-child {
+  border-left: none;
+}
+  
+/*Table for Gold Pricing*/
+table.shopTable3 {
+  position: absolute;
+  border: 2px solid #d5b56e;
+  background-color: #FFFFFF;
+  width: 15vw;
+  text-align: center;
+  margin-top: 1.3vw;
+  margin-left: 34vw;
+  font-family: Amatic SC;
+}
+table.shopTable3 td, table.shopTable3 th {
+  border: 1px solid #d5b56e;
+  padding: .5vw .5vw;
+}
+table.shopTable3 tbody td {
+  font-size: 1.2vw;
+  font-family: Amatic SC;
+}
+table.shopTable3 thead {
+  background: #d5b56e;
+  border-bottom: 0px solid #444444;
+}
+table.shopTable3 thead th {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #F0F0F0;
+  text-align: center;
+  border-left: 0px solid #948473;
+  
+}
+table.shopTable3 thead th:first-child {
+  border-left: none;
+}
+
+.addon-container{
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: -1vw;
+  box-sizing: border-box;
+  border: 3px solid #ba9650;
+  height: 40.5vw;
+  width: 50vw;
+  background-color: rgba(255,255,255,0.12);
+}
+
+
+.piano-img{
+  box-sizing: border-box;
+  border: 1px solid #ba9650;
+  height: 19vw;
+  width: 23vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+}
+
+.addon-text{
+  font-size: 1.5vw;
+  margin-left: 25vw;
+  margin-top: -18vw;
+}
+
+.audio-btn{
+  margin-top: -1vw;
+  margin-left: 25vw;
+  width: 15vw;
+  height: 3vw;
+}
+
+.shop-vid{
+  margin-top: -3.5vw;
+  width: 23.2vw;
+  height: 19.9vw;
+}
+
+.vid-border{
+  position: absolute;
+  margin-left: 1vw;
+  box-sizing: border-box;
+  border: 1px solid #ba9650;
+  height: 16.5vw;
+  width: 23.25vw;
+  margin-top: 9vw;
+}
+
+.photo-text{
+  font-size: 1.5vw;
+  margin-left: 25vw;
+  margin-top: 10vw;
+}
+
+.form-container{
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: -1vw;
+  box-sizing: border-box;
+  border: 3px solid #ba9650;
+  height: 30vw;
+  width: 50vw;
+  background-color: rgba(255,255,255,0.12);
+}
+
+.form-txt{
+  font-family: Josefin Slab;
+  position: absolute;
+  margin-left: 25vw;
+  margin-top: -10vw;
+  font-size: 1.2vw;
+}
+
+
+.contact-txt{
+  font-size: 1.2vw;
+  margin-left: 1vw;
+  font-family: Josefin Slab;
+}
+
+#msg{
+  height: 5vw;
+  width: 20vw;
+}
+
+footer{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: Amatic SC;
+    bottom: 0px;
+}
+
+.email_link{
+    color: #D4AF37;
+    text-decoration: none;
+}
+
+.email_link:hover{
+    color: #D4AF37;
+    font-size: 1.5vw;
+}
